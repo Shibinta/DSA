@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include<string.h>
+int static anagram(char s1[],char s2[],int n1,int n2)
+{
+    char c,m;
+    if(n1!=n2) return 0;
+    for(int i=0;i<n1-1;i++)
+    {
+        for(int j=i+1;j<n2;j++)
+        {
+            if(s1[i]>s1[j])
+            {
+                c=s1[i];
+                s1[i]=s1[j];
+                s1[j]=c;
+            }
+        }
+    }
+    for(int i=0;i<n1-1;i++)
+    {
+        for(int j=i+1;j<n2;j++)
+        {
+            if(s2[i]>s2[j])
+            {
+                m=s2[i];
+                s2[i]=s2[j];
+                s2[j]=m;
+            }
+        }
+    }
+    if((strcmp(s1,s2))==0)
+    {
+        return 1;
+    }
+    else return 0;
+    
+}
+int main()
+{
+    char s1[100];
+    scanf("%s",s1);
+    char s2[100];
+    scanf("%s",s2);
+    
+    int n1=strlen(s1);
+    int n2=strlen(s2);
+    
+    int k=anagram(s1,s2,n1,n2);
+    if(k==1)printf("It's an anagram");
+    else printf("It's not an anagram");
+    return 0;
+}
