@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int ar[]={1,2,4,8,16,32,64};
+    int c=0,cou=0;
+    int n=sizeof(ar)/sizeof(ar[0]);
+    if(n>=3)
+    {
+        for(int i=0;i<n-2;i++)
+        {
+            for(int j=i;j<i+2;j++)
+            {
+                if(ar[j]*2==ar[j+1])
+                {
+                    c++;
+                }
+            }
+            
+            if(c==2)
+            {
+                cou++;
+            }
+            c=0;
+        }
+    }
+    printf("No of subarrays that are GP :%d",cou);
+
+    return 0;
+}
