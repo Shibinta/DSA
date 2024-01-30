@@ -8,7 +8,7 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 #include<string.h>
-#include<stdbool.h>
+#include<stdbool.h> 
 int main()
 {
     char str[100];
