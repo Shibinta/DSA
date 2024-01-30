@@ -13,7 +13,7 @@ int main()
 {
     char str[100];
     scanf("%[^\n]s",str);
-    bool b[26]={false};
+    bool b[26]={false}; 
     int ind=0;
     int n=strlen(str);
     for(int i=0;i<n;i++)
