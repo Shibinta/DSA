@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int v=n;
+	    Double s=0.0;
+	    while(n>0)
+	    {
+	        s+=Math.pow(n%10,3);
+	        n=n/10;
+	    }
+	    if(s==v)
+		System.out.print("It Is an armstrong number");
+		else
+		System.out.print("No it is not");
+	}
+}
